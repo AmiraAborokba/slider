@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slider image-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="slider_image" customModule="slider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yY5-fD-ffT">
+                                <rect key="frame" x="0.0" y="336" width="414" height="224"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="KGt-Pf-dq5"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dkI-ph-4LA">
+                                    <size key="itemSize" width="403" height="228"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mera" id="vhN-cY-3rX" customClass="slidercell" customModule="slider" customModuleProvider="target">
+                                        <rect key="frame" x="5.5" y="0.0" width="403" height="228"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PPi-38-hpH">
+                                            <rect key="frame" x="0.0" y="0.0" width="403" height="228"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Die-mV-pHf">
+                                                    <rect key="frame" x="5" y="5" width="393" height="218"/>
+                                                    <color key="backgroundColor" red="0.31085869669914246" green="0.94010031223297119" blue="0.77286237478256226" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Die-mV-pHf" secondAttribute="bottom" constant="5" id="16K-Mf-VH2"/>
+                                                <constraint firstItem="Die-mV-pHf" firstAttribute="leading" secondItem="PPi-38-hpH" secondAttribute="leading" constant="5" id="6Db-E7-csu"/>
+                                                <constraint firstItem="Die-mV-pHf" firstAttribute="top" secondItem="PPi-38-hpH" secondAttribute="top" constant="5" id="BjF-Uo-hJE"/>
+                                                <constraint firstAttribute="trailing" secondItem="Die-mV-pHf" secondAttribute="trailing" constant="5" id="Vxq-aV-857"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="403" height="228"/>
+                                        <connections>
+                                            <outlet property="imageview" destination="Die-mV-pHf" id="8JH-ne-27k"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="38b-Hq-fhY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="k1T-QR-70w"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jI3-ed-GpP">
+                                <rect key="frame" x="187.5" y="523" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yY5-fD-ffT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5vq-fd-Q1Q"/>
+                            <constraint firstItem="yY5-fD-ffT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Af-DW-rbG"/>
+                            <constraint firstItem="yY5-fD-ffT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DFd-dw-DzQ"/>
+                            <constraint firstItem="jI3-ed-GpP" firstAttribute="centerX" secondItem="yY5-fD-ffT" secondAttribute="centerX" id="GvF-TE-ZG5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yY5-fD-ffT" secondAttribute="trailing" id="eik-xE-hW1"/>
+                            <constraint firstItem="jI3-ed-GpP" firstAttribute="bottom" secondItem="yY5-fD-ffT" secondAttribute="bottom" id="rqs-WA-CEP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionview" destination="yY5-fD-ffT" id="MB9-QK-Jei"/>
+                        <outlet property="pagecontroller" destination="jI3-ed-GpP" id="R1e-t8-4h4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Odp-wP-Gh2">
+                    <rect key="frame" x="0.0" y="0.0" width="39" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </pageControl>
+            </objects>
+            <point key="canvasLocation" x="-501" y="80"/>
+        </scene>
+    </scenes>
+</document>
